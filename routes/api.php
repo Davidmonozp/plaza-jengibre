@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController as ApiAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -33,4 +34,7 @@ Route::delete('/producto/{id}', [ProductoController::class, 'destroy'])->name('p
 
 //Rutas Categoria
 Route::resource('categoria', CategoriaController::class);
+
+//Rutas inventario
+Route::resource('inventario', InventarioController::class);
 
